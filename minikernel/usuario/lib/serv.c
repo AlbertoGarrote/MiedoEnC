@@ -1,9 +1,9 @@
 /*
  *  usuario/lib/serv.c
  *
- *  Minikernel. Versión 1.0
+ *  Minikernel. Versiï¿½n 1.0
  *
- *  Fernando Pérez Costoya
+ *  Fernando Pï¿½rez Costoya
  *
  */
 
@@ -14,13 +14,13 @@
  *
  *      SE DEBE MODIFICAR AL INCLUIR NUEVAS LLAMADAS
  *
- */
+ */ 
 
 #include "llamsis.h"
 #include "servicios.h"
 
-/* Función del módulo "misc" que prepara el código de la llamada
-   (en el registro 0), los parámetros (en registros 1, 2, ...), realiza la
+/* Funciï¿½n del mï¿½dulo "misc" que prepara el cï¿½digo de la llamada
+   (en el registro 0), los parï¿½metros (en registros 1, 2, ...), realiza la
    instruccion de llamada al sistema  y devuelve el resultado 
    (que obtiene del registro 0) */
 
@@ -45,5 +45,8 @@ int escribir(char *texto, unsigned int longi){
 }
 int obtener_id(){
 	return llamsis(OBTENER_ID, 0);
+}
+int dormir(unsigned int segundos){
+	return llamsis(DORMIR, 1, (long) segundos);
 }
 
